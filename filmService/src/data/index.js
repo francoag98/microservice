@@ -1,6 +1,6 @@
-const films = require("./films.json");
+const axios = require("axios");
 const list = async () => {
-  return films;
+  return await axios.get("http://database:8004/Film").then((res) => res.data);
 };
 
 module.exports = {
